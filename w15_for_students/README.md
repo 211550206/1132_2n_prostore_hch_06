@@ -1,19 +1,24 @@
+#### Week 15
+
+##### =>　 package.json
+
+```
 {
-  "name": "prostore-06",
+  "name": "prostore-xx",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && next build",
+    "build": "prisma generate --no-engine && next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate --no-engine"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.9.1",
-    "@hookform/resolvers": "^5.1.1",
-    "@prisma/client": "^6.9.0",
-    "@prisma/extension-accelerate": "^2.0.1",
+    "@hookform/resolvers": "^5.0.1",
+    "@prisma/client": "^6.7.0",
+    "@prisma/extension-accelerate": "^1.3.0",
     "@radix-ui/react-alert-dialog": "^1.1.14",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-dropdown-menu": "^2.1.12",
@@ -30,20 +35,50 @@
     "query-string": "^9.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hook-form": "^7.58.0",
-    "sonner": "^2.0.5",
+    "react-hook-form": "^7.56.4",
+    "react-hot-toast": "^2.5.2",
+    "slugify": "^1.6.6",
+    "sonner": "^2.0.3",
     "tailwind-merge": "^3.2.0",
-    "zod": "^3.25.64"
+    "zod": "^3.25.30"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20.19.0",
+    "@types/node": "^20.17.43",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "prisma": "^6.9.0",
+    "prisma": "^6.7.0",
     "tailwindcss": "^4",
-    "tsx": "^4.20.3",
+    "tsx": "^4.19.4",
     "tw-animate-css": "^1.2.8",
     "typescript": "^5.8.3"
   }
 }
+```
+
+##### => install packages
+
+```
+$ npm install
+
+```
+
+##### => install shadcn ui components
+
+```bash
+$ npx shadcn@latest add alert-dialog badge form input label select sheet sonner table
+
+```
+
+##### => copy files
+
+```
+app/(auth)/*
+app/api/*
+app/unauthorized/*
+lib/utils.ts
+lib/validator.ts
+lib/constants/index.ts
+auth.ts
+middleware.ts
+```

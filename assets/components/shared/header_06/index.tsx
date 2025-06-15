@@ -29,8 +29,8 @@ const Header_06 = () => {
                 </Link>
             </Button>
             <Button asChild>
-                <Link href='/sign-in_06'>
-                  <UserIcon /> signIn_06
+                <Link href='/sign-in'>
+                  <UserIcon /> signIn
                 </Link>
             </Button>
           </div>
