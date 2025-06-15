@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { signUpUser } from '@/lib/actions/user.actions_xx';
+import { signUpUser } from '@/lib/actions/user.actions_06';
 import { useSearchParams } from 'next/navigation';
 
-const SignUpForm_xx = () => {
+const SignUpForm_06 = () => {
   const [data, action] = useActionState(signUpUser, {
     success: false,
     message: '',
@@ -92,4 +92,4 @@ const SignUpForm_xx = () => {
     </form>
   );
 };
-export default SignUpForm_xx;
+export default SignUpForm_06;

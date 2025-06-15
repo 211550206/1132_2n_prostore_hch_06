@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { signInWithCredentials } from '@/lib/actions/user.actions_xx';
+import { signInWithCredentials } from '@/lib/actions/user.actions_06';
 import { useSearchParams } from 'next/navigation';
 
-const CredentialSignInForm_xx = () => {
+const CredentialSignInForm_06 = () => {
   const [data, action] = useActionState(signInWithCredentials, {
     success: false,
     message: '',
@@ -70,4 +70,4 @@ const CredentialSignInForm_xx = () => {
     </form>
   );
 };
-export default CredentialSignInForm_xx;
+export default CredentialSignInForm_06;

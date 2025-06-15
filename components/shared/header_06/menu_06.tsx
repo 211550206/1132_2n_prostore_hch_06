@@ -9,7 +9,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-// import UserButton from './user-button_06';
+import UserButton from './user-button_06';
+import UserButton_06 from './user-button_06';
 
 const Menu_06 = () => {
   return (
@@ -21,20 +22,14 @@ const Menu_06 = () => {
             <ShoppingCart /> Cart
           </Link>
         </Button>
-        <Button asChild variant='ghost'>
-          <Link href='/sign-in'>
-            <UserIcon /> Sign In
-          </Link>
-        </Button>
-        
-        {/* <UserButton /> */}
+        <UserButton_06 />
       </nav>
       <nav className='md:hidden'>
         <Sheet>
           <SheetTrigger className='align-middle'>
             <EllipsisVertical />
           </SheetTrigger>
-          <SheetContent className='flex flex-col items-start  bg-white'>
+          <SheetContent className='flex flex-col items-start px-4  py-4 bg-white'>
             <SheetTitle>Menu</SheetTitle>
             <ModeToggle_06 />
             <Button asChild variant='ghost'>
@@ -42,12 +37,7 @@ const Menu_06 = () => {
                 <ShoppingCart /> Cart
               </Link>
             </Button>
-            <Button asChild variant='ghost'>
-              <Link href='/sign-in'>
-                <UserIcon /> Sign In
-              </Link>
-            </Button>
-            {/* <UserButton /> */}
+            <UserButton_06 />
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>

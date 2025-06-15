@@ -9,7 +9,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { APP_NAME } from '@/lib/constants';
-import CredentialSignInForm_xx from './credential-signin-form_xx';
+import CredentialSignInForm_06 from './credential-signin-form_06';
 import { auth } from '@/auth';
 import { redirect } from 'next/navigation';
 
@@ -44,7 +44,7 @@ const SignInPage = async (props: {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <CredentialSignInForm_xx />
+          <CredentialSignInForm_06 />
         </CardContent>
       </Card>
     </div>

@@ -11,13 +11,13 @@ import Image from 'next/image';
 import { APP_NAME } from '@/lib/constants';
 import { auth } from '@/auth';
 import { redirect } from 'next/navigation';
-import SignUpForm_xx from './sign-up-form_xx';
+import SignUpForm_06 from './sign-up-form_06';
 
 export const metadata: Metadata = {
   title: 'Sign Up',
 };
 
-const SignUpPage_xx = async (props: {
+const SignUpPage_06 = async (props: {
   searchParams: Promise<{ callbackUrl: string }>;
 }) => {
   const { callbackUrl } = await props.searchParams;
@@ -44,10 +44,10 @@ const SignUpPage_xx = async (props: {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <SignUpForm_xx />
+          <SignUpForm_06 />
         </CardContent>
       </Card>
     </div>
   );
 };
-export default SignUpPage_xx;
+export default SignUpPage_06;
