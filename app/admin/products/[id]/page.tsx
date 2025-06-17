@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import UpdateProductForm_06 from './update-product-form_06';
-import { getProductById } from '@/lib/actions/procduct.actions_06';
+import { getProductById } from '@/lib/actions/product.actions_06';
 import notFound from '@/app/not-found';
 
 export const metadata: Metadata = {
