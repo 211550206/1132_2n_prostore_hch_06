@@ -4,6 +4,8 @@ export const APP_DESCRIPTION =
   'A modern store built with Next.js, ShadCN, and Prisma';
 export const SERVER_URL =
   process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000';
+export const LATEST_PRODUCTS_LIMIT =
+  Number(process.env.LATEST_PRODUCTS_LIMIT) || 4;
 
 export const signInDefaultValues = {
   email: '',
@@ -28,8 +30,8 @@ export const productDefaultValues = {
   description: '',
   price: '0',
   stock: 0,
-  rating: 0,
-  numReviews: 0,
+  rating: '0',
+  numReviews: '0',
   isFeatured: false,
   banner: null,
 };

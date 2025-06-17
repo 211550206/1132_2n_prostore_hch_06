@@ -58,25 +58,6 @@ export const cartItemSchema = z.object({
   price: currency,
 });
 
-// export const insertCartSchema = z.object({
-//   userId: z.string().optional(),
-//   sessionCartId: z.string(),
-//   items: z.array(
-//     z.object({
-//       name: z.string(),
-//       price: z.string(),
-//       slug: z.string(),
-//       productId: z.string(),
-//       qty: z.number(),
-//       image: z.string(),
-//     })
-//   ),
-//   itemsPrice: z.string(),
-//   totalPrice: z.string(),
-//   shippingPrice: z.string(),
-//   taxPrice: z.string(),
-// });
-
 export const insertCartSchema = z.object({
   items: z.array(cartItemSchema),
   itemPrice: currency,

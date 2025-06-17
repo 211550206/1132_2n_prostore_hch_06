@@ -48,7 +48,7 @@ export const config = {
           if (isMatch) {
             return {
               id: user.id,
-              name: user.name || 'NO_NAME',
+              name: user.name,
               email: user.email,
               role: user.role,
             };
@@ -93,42 +93,6 @@ export const config = {
         }
       }
       return token;
-    },
-    authorized({ request, auth }: any) {
-      // Array of regex patterns of paths we want to protect
-      const protectedPaths = [
-        /^\/user\/.*/,
-        /^\/admin\/.*/,
-        /^\/cart\/.*/,
-        /^\/order\/.*/,
-      ];
-
-      // Get pathname form teh request URL object
-      const { pathname } = request.nextUrl;
-
-      // Check if user is not authenticated and accessing a protected path
-      if (!auth && protectedPaths.some((p) => p.test(pathname))) return false;
-
-      if (!request.cookies.get('sessionCartId')) {
-        // check for session cart cookie
-        // generate new session cart id cookie
-        const sessionCartId = crypto.randomUUID();
-        console.log('sessionCartId', sessionCartId);
-        // clone the req headers
-        const newRequestHeaders = new Headers(request.headers);
-        // create new response and add new headers
-        const response = NextResponse.next({
-          request: {
-            headers: newRequestHeaders,
-          },
-        });
-
-        // set newly generated session cart id in the response cookie
-        response.cookies.set('sessionCartId', sessionCartId);
-        return response;
-      } else {
-        return true;
-      }
     },
   },
 } satisfies NextAuthConfig;
