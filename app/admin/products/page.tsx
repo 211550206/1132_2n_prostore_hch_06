@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {
   getAllProducts,
   deleteProduct,
-} from '@/lib/actions/procduct.actions_06';
+} from '@/lib/actions/product.actions_06';
 import { formatCurrency, formatId } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
